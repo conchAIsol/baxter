@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>NSO Music Player</title>
+    <link rel="stylesheet" href="music.css">
+  </head>
+  <body>
+    <a id="music-left" target=”_blank” style="height: 85px;">
+      <img id="music-logo" style="object-fit: cover; width: 85px; height: 85px;" src="http://img.youtube.com/vi/Y6k3sMgobP4/maxresdefault.jpg">
+    </a>
+    <div id="music-right" style="flex-grow: 1; min-width: 0;">
+      <div id="song-title">
+        <div id="song-name">&nbsp;</div>
+
+      </div>
+      
+      <div id="details">
+        <div id="controls">
+          <img src="music_prev.png" id="music-prev">
+          <img src="music_play.png" id="music-toggle" style="cursor: pointer">
+          <img src="music_next.png" id="music-next">
+        </div>
+        <div id="volume-area" style="flex-grow: 1; display:flex;align-items: center;gap: 4px;">
+          <img id="volume-icon" src="../sprites/music_volume_100.png">
+          <div id="volume-bar" style="flex-grow:1;">
+            <div id="volume-fill"></div>
+            <div class="knob"></div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <div id="player"></div>
+    <script src="music.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+  </body>
+</html>
