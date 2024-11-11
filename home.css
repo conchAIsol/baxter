@@ -1,0 +1,414 @@
+body {
+    background-color: #f0eff4;
+    background-image: var(--skybg);
+    width: 400px;
+    max-width: 400px;
+    background-size: 100vw;
+}
+#mainWrapper {
+    display: grid;
+    width: 80%;
+    max-width: 1450px;
+    min-height: 0;
+    aspect-ratio:  18/10;
+    grid-template-rows: 1fr;
+    grid-template-columns: 10%  1fr 20%;
+    grid-template-areas: 'left middle right';
+}
+
+#houseGraphicWrapper {
+    position: relative;
+    grid-area: middle;
+    width: 100%;
+    max-height: 100%;
+}
+#houseBubble{
+    background-image: url(images/backgrounds/grasspattern.png);
+    width: 120%;
+    height: 80%;
+    filter: url("home.css");
+    border-radius: 25%;
+}
+#houseGraphicWrapper img {
+    width: 100%;
+    max-height: 100%;
+}
+
+/*#region feeling*/
+#feelingWrapper {
+    visibility: hidden;
+    scale: 1.1;
+    position: absolute;    
+    width: 15%;
+    top: 23%;
+    left: 40%;
+}
+#feeling {
+    scale: 1.2;
+    margin-top: 10px;
+    height: min-content;
+    container: feeling / inline-size;
+}
+#feeling span{
+    margin: 0;
+}
+@container feeling (min-width: 0px){
+    #feeling p {
+        margin: 0;
+        font-size: 10cqw;
+    }
+    #feeling img {
+        width: auto;
+    }
+}
+@container feeling (max-width: 100px){
+    #feeling img {
+        width: 70%;
+    }
+}
+#miniBubble {
+    padding: 0.5vw;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 30%;
+    bottom: -45%;
+}
+/*#endregion feeling*/
+
+#leftWrapper {
+    position: relative;
+    height: 80%;
+    grid-area: left;
+}
+#rightWrapper {
+    position: relative;
+    grid-area: right;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*#region nav*/
+#navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 2%;
+    min-height: 75%;
+    max-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    container: navbar / size;
+}
+#navbar > * {
+    margin: 5px;
+}
+@container navbar (min-width:0px) {
+    li.cloudBubble > a{
+        margin: 5cqw;
+        font-size: 15cqw;
+    }
+}
+/*#endregion nav*/
+
+/*#region info bubble*/
+.infoContent{
+    margin: 10px;
+    color: #61b0ff;
+    container: info / inline-size;
+}
+@font-face {
+    font-family: "goodfont";
+    src: url('/templates/fonts/Animal-Crossing-Wild-World.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+#cawrapper{
+    width: 100%;
+    text-align: center;
+    font-family: "goodfont";
+}
+
+#imageContainer{
+    position: absolute;
+}
+
+#ca{
+    top: -5%;
+    font-size: 40px;
+    font-family: "Porkys";
+    position: absolute;
+    left: 48%;
+    transform: translate(-50%, -50%); /* Center the element */
+    text-align: center;
+}
+
+.welcomeImg{
+    width: 90%;
+}
+#dh {
+    display: block;
+    font-family: "Adelia";
+    font-size: 40px;
+    line-height: 100%;
+    margin-top: 1cqh;
+}
+
+#da {
+    display: block;
+    width: 100%;
+    font-family: "Adelia";
+    font-size: 3cqw;
+    margin-top: 1cqh;
+    text-align: center;
+}
+.textReg{
+    font-weight: 1000;
+    font-size: 6cqw;
+    color: #5d310b;
+}
+.textSmall{
+    font-weight: 700;
+    font-size: 5.5cqw;
+    line-height: 110%;
+    text-justify: distribute;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.textSmall a{color: #004cff;}
+.textFluffy{
+    display: block;
+    color: #95cdff;
+    text-shadow: var(--cloudBg) 0 0 5px;
+    margin-top: 15px;
+    margin-bottom: -10px;
+    font-family: "Porkys";
+    font-size: 6cqw;
+    letter-spacing: 5px;
+}
+/*#endregion info bubble*/
+
+.item:hover,
+.itemHover{
+    filter: 
+        drop-shadow(0 3px 0 rgb(255, 255, 255))
+        drop-shadow(0 -3px 0 rgb(255, 255, 255))
+        drop-shadow(3px 0 0 rgb(255, 255, 255))
+        drop-shadow(-3px 0 0 rgb(255, 255, 255));
+}
+#journal{
+    clip-path: polygon(28% 67%, 28% 63%, 34% 57%, 40% 60%, 41% 64%, 35% 69%);
+}
+#contact{
+    clip-path: polygon(72% 60%, 67% 55%, 67% 51%, 69% 45%, 68% 42%, 71% 38%, 79% 46%, 78% 49%, 78% 55%);
+}
+#about{
+    clip-path: polygon(52% 66%, 48% 65%, 44% 60%, 42% 54%, 44% 49%, 47% 49%, 42% 41%, 46% 30%, 49% 23%, 53% 20%, 58% 22%, 61% 33%, 65% 39%, 69% 45%, 70% 52%, 66% 56%, 68% 59%, 67% 63%, 62% 61%, 61% 53%, 59% 55%, 58% 58%, 56% 57%, 54% 56%, 53% 63%);
+}
+#links{
+    clip-path: polygon(18% 46%, 17% 33%, 25% 26%, 26% 38%, 32% 43%, 32% 45%, 24% 52%);
+}
+#music{
+    clip-path: polygon(10% 60%, 6% 55%, 8% 52%, 10% 52%, 10% 41%, 15% 41%, 14% 35%, 18% 31%, 21% 37%, 21% 42%, 19% 45%, 20% 49%, 19% 55%, 15% 58%);
+}
+#snail{
+    clip-path: polygon(43% 99%, 46% 94%, 50% 92%, 48% 88%, 44% 86%, 42% 89%, 40% 93%, 36% 97%);
+}
+#pets{
+    clip-path: polygon(83% 66%, 74% 60%, 74% 47%, 83% 41%, 92% 46%, 92% 60%);
+}
+
+.PikRing{
+    border: 2px solid orange;
+    border-radius: 30px;
+    background-image: url(https://nickolox.neocities.org/pikring/asset/bg-bulbmin.png);
+    font-weight: bold;
+    font-size: 0.7vw;
+    width: 90%;
+    height: 50px;
+    color: red;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 25%;
+}
+.PikRing p{
+    max-width: 100%;
+    margin: auto; 
+    text-align: center;
+    z-index: 1
+}
+.PikRing p:first-child{
+    position: relative;
+}
+.PikRing p:last-child{
+    position: relative;
+}
+  
+.PikRing a{
+    color: white;
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+}
+  
+.PikRingImage {
+    content: url(https://nickolox.neocities.org/pikring/asset/bulbmin.png);
+    width: auto;
+    height: 200%;
+    max-height: 100px;
+    position: absolute;
+    top: -100%;
+}
+@media only screen and (max-width:600px) {
+    body{
+        overflow-y: auto;
+    }
+    #mainWrapper {
+        display: grid;
+        width: 100%;
+        height: min-content;
+        max-height: 100%;
+        grid-template-rows: 11vh min-content min-content;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'left'
+        'middle'
+        'right';
+        top: 0;
+        left: 0;
+        transform: translate(0);
+    }
+    #leftWrapper {
+        position: relative;
+        height: 100%;
+        grid-area: left;
+    }
+    #rightWrapper {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        grid-area: right;
+        width: 100%;
+        height: 70%;
+        padding: 5px;
+    }
+
+    #navbar {
+        list-style-type: none;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 3%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        container: navbar / size;
+    }
+    @container navbar (min-width:0px) {
+        li.cloudBubble > a{
+            font-size: 4cqw;
+            margin: 2cqw;
+        }
+    }
+    #navbar .cloudBubble{
+        width: min-content;
+    }
+
+    #houseGraphicWrapper {
+        grid-area: middle;
+        width: 100%;
+        aspect-ratio: 13/10;
+    }
+
+    .cloudBubble:has(.infoContent){
+        width: 90%;
+        margin: auto;
+        margin-top: 52px;
+    }
+    .infoContent{
+        padding: 6% 8%;
+        padding-top: 2%;
+    }
+    .infoContent img{
+        width: 50%;
+    }
+    .infoContent p{
+        font-size: 4cqw;
+        margin-top: 2%;
+        margin-bottom: 0;
+    }
+    #dh{
+        font-size: 1.6em;
+    }
+    #hitcount{
+        font-size: 1.4em;
+    }
+
+    #feelingWrapper{
+        top: 15vw;
+    }
+    .PikRing{
+        width: 60%;
+        max-width: none;
+        margin: auto;
+        margin-top: 30px;
+        height: 50px;
+        font-size: 2.5cqw;
+    }
+    .PikRingImage{
+        height: 150%;
+        top:-50%;
+    }
+}
+
+#live{
+    border-radius: 5px;
+    position: relative;
+    bottom: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+#name{
+    visibility: hidden;
+    border-radius: 5px;
+    position: relative;
+    bottom: 20px;
+    left: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#what{
+    position: relative;
+    bottom: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+#close{
+    position: relative;
+    bottom: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid red;
+    left: 35px;
+    visibility: hidden;
+}
+
+.feelingWobble{
+    scale: 1.2;
+}
+
+
+  

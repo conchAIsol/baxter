@@ -1,0 +1,377 @@
+:root{
+    --accent: #d3e307;
+    --shadow-color: 200deg 30% 52%;
+}
+
+.marquee{
+    overflow: hidden;
+}
+#statsBubble a,
+#aboutInfo a{
+    color: hotpink;
+    text-decoration: underline;
+}
+
+#contentWrapper{
+ display: flex;
+}
+#leftContentWrapper{
+    min-width: 40%;
+    position: relative;
+    
+}
+#rightContentWrapper{
+    padding: 3%;
+    padding-bottom: 0;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1%;
+}
+
+#imgBubble{
+    background-color: var(--accent);
+    background-image: url(images/misc/pix-gradient.png);
+    background-repeat: repeat-x;
+    margin: 5%;
+    width: 92%;
+    aspect-ratio: 1;
+    position: absolute;
+}
+#imgBubble img{image-rendering: pixelated}
+
+/*#region stats*/
+#statsBubble{
+    z-index: -1;
+    width: 85%;
+    background-color: white;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 3%;
+}
+#tinyBadges{
+    width: 100%;
+    padding-top: 5px;
+}
+
+/*#region stat table*/
+#statsBubble table{
+    width: 100%;
+    margin-top: 2%;
+    border-spacing: 0;
+    font-family: "PlanetE";
+    letter-spacing: 0;
+}
+#statsBubble table tr:last-child th{
+    padding-bottom: 2%;
+}
+#statsBubble table tr:first-child th{
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+#statsBubble th{
+    width: 30%;
+    font-weight: 100;
+    font-size: 12px;
+    text-align: left;
+    padding-left: 3%;
+}
+#statsBubble td{
+    font-family: 'MS UI Gothic', sans-serif;
+    font-size: 12px;
+    background-color: aliceblue;
+    padding-left: 3%;
+    padding-bottom: 1%;
+}
+#basics th{
+    background-color: gold;
+}
+#favs th{
+    background-color: rgb(255, 176, 221);
+}
+#currently th{
+    background-color: rgb(152, 229, 122);
+}
+#favColours div{
+    float: left;
+    margin: 1px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+#favColours :nth-child(1){
+    background-color: #865422;
+}
+#favColours :nth-child(2){
+    background-color: #ffa43c;
+}
+#favColours :nth-child(3){
+    background-color: rgb(255, 176, 221);
+}
+#favColours :nth-child(4){
+    background-color: #68a62a;;
+}
+/*#endregion stat table*/
+/*#endregion stats*/
+
+#badges{
+    display: grid;
+    grid-template-columns: repeat(6, min-content);
+    grid-auto-flow: row;
+    justify-content: center;
+    margin: 2%;
+}
+
+/*#region about info*/
+#aboutInfo{
+    width: 100%;
+    text-align: justify;
+    font-size: 0.9em;
+}
+#aboutInfo p{
+    margin-top: 0;
+}
+.highlight{
+    letter-spacing: 3px;
+    padding: 0 5px;
+    font-family: "PlanetE";
+}
+#interests span{
+    background-color: gold;
+}
+#hobbies span{
+    background-color: rgb(152, 229, 122);
+}
+#dislikes span{
+    background-color: rgb(255, 176, 221);
+}
+.rainbowText{
+    font-family: "Adelia";
+}
+/*#endregion about info*/
+
+/*#region quiz*/
+#quizBubble{
+    flex-grow: 2;
+    width: 100%;
+    background-color: var(--accent);
+    padding: 4%;
+    padding-top: 0;
+    position: relative;
+    height: 175px;
+    border: 5px solid var(--accent);
+    overflow: hidden;
+}
+#quizBubble span{
+    font-family: "PlanetE";
+    color: var(--mainbody);
+    display: block;
+    text-align: center;
+}
+#resultsWrapper{
+    overflow: auto;
+    scrollbar-color: #aab700 var(--accent);
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 95%;
+    display: grid;
+    grid-template-columns: 50% 50%;         
+    grid-auto-flow: dense;
+}
+#quizBubble img{
+ width: 100%;
+ height: 100%;}
+/*#endregion quiz*/
+
+#stamps{
+height: 56px;
+overflow: hidden;
+}
+
+/*#region speech bubble*/
+#littleFella{
+    width: 97%;
+    max-height: 100px;
+    display: flex;
+    align-items: center;
+}
+#speechBubble{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+#speechBubble :nth-child(1){
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid var(--accent);
+    position: relative;
+    right: -5px;
+
+}
+#speechBubble :nth-child(2){
+    background-color: var(--accent);
+    width: 100%;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    font-family: "PlanetE";
+    font-size: 0.9em;
+}
+/*#endregion speech bubble*/
+
+#fanlistings{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-flow: dense;
+    margin-bottom: 30px;
+}
+#fanlistings a{
+    height: 50px;
+}
+
+@container main (min-width:0px) {
+    #leftContentWrapper {
+        padding-bottom: 5cqw;
+    }
+
+    #statsBubble {
+        border-radius: 0 0 3cqw 3cqw;
+        padding-top: 33cqw;
+        top: 7cqw;
+    }
+    #statsBubble table tr:last-child th{
+        border-bottom-left-radius: 3cqw;
+    }
+    #statsBubble table tr:last-child td{
+        border-bottom-right-radius: 3cqw;
+    }
+    #statsBubble table tr:first-child th{
+        border-top-left-radius: 3cqw;
+        border-top-right-radius: 3cqw;
+    }
+
+    #quizBubble span{
+        font-size: 2cqw;
+        letter-spacing: 0.5cqw;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    #contentWrapper{
+        flex-direction: column;
+        overflow: auto;
+    }  
+
+    #imgBubble{
+        width: 50%;
+        left: -3%;
+    }
+    #statsBubble{
+        padding-top: 3%;
+        width: 95%;
+        height: min-content;
+        border-radius: 10cqw;
+        display: grid;
+        grid-template-columns: 55% 1fr;
+        grid-template-rows: 25vw 25vw min-content;
+    }
+    #tinyBadges{
+        visibility: collapse;
+        height: 0;
+        width: 0;
+    }
+    #statsBubble table{
+        margin: 5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #statsBubble table tr:last-child th{
+        border-bottom-left-radius: 10cqw;
+    }
+    #statsBubble table tr:last-child td{
+        border-bottom-right-radius: 10cqw;
+    }
+    #statsBubble table tr:first-child th{
+        border-top-left-radius: 10cqw;
+        border-top-right-radius: 10cqw;
+    }
+    #statsBubble th,
+    #statsBubble td{
+        font-size: 9px;
+    }
+    #basics{
+        width: 100%;
+        height: 100%;
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    #favs{
+        width: 100%;
+        height: min-content;
+        grid-area: 3 / 1 / 4/ 3;
+    }
+    #currently{
+        width: 100%;
+        height: 100%;
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    #rightContentWrapper{
+        padding-top: 2%;
+    }
+    #badges{
+        grid-template-columns: repeat(4, min-content);
+    }
+    #fanlistings{
+        grid-template-columns: repeat(7, 1fr);
+        margin: 10px;
+    }
+}
+@media only screen and (min-width:600px){
+
+    #badges {
+        gap: 0px;
+        grid-template-columns: repeat(3, min-content);
+    }
+    #speechBubble :nth-child(2){
+        font-size: 0.8em;
+    }
+    #stamps{
+        max-width: 53cqw;
+    }
+}
+@media only screen and (min-width:1000px){
+    #imgBubble{
+        background-image: url(images/misc/pix-gradientx2.png);
+    }
+
+    #badges {
+        gap: 0px;
+        grid-template-columns: repeat(4, min-content);
+    }
+    #speechBubble :nth-child(2){
+        font-size: 1em;
+    }
+    #stamps{
+        max-width: 400px;
+    }
+}
+@media only screen and (min-width:1300px) {
+    #badges{
+        grid-template-columns: repeat(6, min-content);
+        gap: 3px;
+    }
+    #speechBubble :nth-child(2){
+        font-size: 1.1em;
+    }
+    #stamps{
+        max-width: 530px;
+    }
+}
+

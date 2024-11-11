@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--DO NOT copy my code or save/use my assets. Send me an email at doghouse.neocities@gmail.com if you have any questions about my site. Franks you-->
+<!--CREDITS: Fonts used: Kinky by Sick again (https://sickagain.gumroad.com/l/qfiyq), Nunito by Vernon Adams, Cyreal, Jacques Le Bailly (https://www.fontshare.com/fonts/nunito), Porky's by fontalicious (https://www.dafont.com/porky-s.font) -->
+<html lang="en-GB">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Links </title>
+        <link rel="shortcut icon" type="image/jpg" href="images/favicon.svg">
+        <link rel="stylesheet" href="templates/pagebase.css">
+        <link rel="stylesheet" href="templates/pagev1.css">
+        <link rel="stylesheet" href="links.css">
+        <script src="globalscripts.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="cloudHolder" style="width: 200px; height: 200px; position: absolute;">
+
+        </div>
+        <script src="modules/clouds.js"></script>
+        <svg style="position: absolute; width: 0; height: 0;">
+            <filter id="blur">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="0.5" />
+            </filter>
+        </svg>
+        <svg style="position: absolute; width: 0; height: 0;">
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" />
+              <feColorMatrix
+                in="blur"
+                values="1 0 0 0 0 
+                        0 1 0 0 0 
+                        0 0 1 0 0 
+                        0 0 0 15 -7"
+            />
+            </filter>
+        </svg>
+        <div>
+            <img class="hidden" src="images/DHSVGs/DHicon1.svg" alt="">
+            <img class="hidden" src="images/DHSVGs/DHicon2.svg" alt="">
+            <img class="hidden" src="images/DHSVGs/DHicon3.svg" alt="">
+            <img class="hidden" src="images/DHSVGs/DHicon4.svg" alt="">
+            <img class="hidden" src="images/DHSVGs/DHicon5.svg" alt="">
+            <img class="hidden" src="images/DHSVGs/DHicon6.svg" alt="">
+            <img class="hidden" src="images/DHSVGs/DHicon7.svg" alt="">
+            <img class="hidden" src="images/DHSVGs/DHicon8.svg" alt="">
+            <img class="hidden" src="images/DHSVGs/DHicon9.svg" alt="">
+        </div>
+
+        <div class="mainGrid">
+            <div class="leftContainer"></div>
+
+            <div class="leftSidebar">
+                <ul id="navbar"></ul>
+                <script type="module" src="modules/navbar.js"></script>
+            </div>
+            
+            <div class="mainContainer">
+
+                <div id="start"><span class="material-icons-round">pets</span></div>
+                <div id="taskbar">
+                    <span class="material-icons-round md-18">signal_cellular_alt</span>
+                    <span class="material-icons-round md-18">wb_sunny</span>
+                    <div id="battery"></div>
+                    <div id="clock"></div>
+                </div>
+
+                <div id="desktop">
+                    <div id="sites">
+                        <a href="https://x.com/binkyonsol"><img src="images/site-buttons/x64.png" style="scale: 0.8" alt="neoratz">twitter</a>
+                        
+                        <a href="snake.html"><img src="s.png" alt="shriyauday">snek</a>
+                        <a href="target.html"><img src="target64.png" alt="shriyauday">targets</a>
+                        <a href="doodlejump/index.html"><img src="doodle.png" alt="shriyauday">doodel jump</a>
+                        
+                        
+                    </div>
+
+                    
+                </div>
+
+                
+
+            <div class="header">
+                <div class="title">
+                    LINKS
+                </div>
+            </div>
+
+            <div class="homeContainer">
+                <a href="home.html"><div id="homeLink"></div></a>
+            </div>
+
+            <div class="rightSidebar">
+                <div id="player" class="cloudBubble">
+                    <div class="wobble"></div>
+                    <span class="textFluffy vertCentre">:3c</span>
+                </div>
+            </div>
+            <div class="rightContainer"></div>
+        </div>
+
+        
+    
+    <Script src="modules/desktop.js"></Script>
+    <script type="module">
+        import {generateNumber, generateBorder, generateTransform, wobble, float} from './modules/wobbleAnimation.js';
+
+        const wobblers = document.getElementsByClassName("wobble");
+        Array.from(wobblers).forEach((element) => {
+            wobble(element, 3, 5, 10000);
+            float(element, -1, 0, 10000);
+        });
+        const floaters = document.getElementsByClassName("cloudBubble");
+        Array.from(floaters).forEach((element) =>{
+            float(element, -2, 2, 10000);
+        });
+
+        function startTime() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            m = checkTime(m);
+            document.getElementById('clock').innerHTML =  h + ":" + m;
+            setTimeout(startTime, 1000);
+        }
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};
+          return i;
+        }
+        startTime();
+    </script>
+
+    <a href="index.html">
+        <img id="back" src="arrow.png">
+    </a>
+    </body>

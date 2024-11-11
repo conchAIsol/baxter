@@ -1,0 +1,65 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Snuppo Journal",
+  "home_page_url": "https://dog-house.neocities.org",
+  "feed_url": "https://dog-house.neocities.org/journal.json",
+  "language": "en",
+  "items": [
+    {
+      "id": "7",
+      "date_published": "2024-10-15T20:27:42+01:00",
+      "title": "tired ᵒC",
+      "content_html": "<p>Life has been somewhat Suck recently because I'm sick a lot.</p><p>Plus, you see <b><em style=\"color:red;\">there is a war raging inside of me. Two wolves killing inside of me. Bloody bleeding hearts and it is so fucked up.</b></em> because on one hand I would like to talk about being sick but on the other hand I don't really feel very comfortable doing that here.<br>It's like when you post something online, everyone who sees it takes a piece of it. I don't like the idea of strangers taking bits of me. I don't trust strangers.</p><p>Either way, I'm sick and it makes me really tired and I can't do much and it feels bad and I guess that's all I'll say. Except that the cold weather makes it worse also.<br>Despite all that, I'm glad autumn is here. I like the way it looks outside plus it means my cat isn't too hot to cuddle under the duvet anymore :)</p><hr><figure style=\"max-width:399px; margin-left:auto; margin-right:auto\"><figcaption><span style=\"color:#778899; text-align:center; \">SOMEWHAT RELATED SCHEMATIC:</span></figcaption><img loading=\"lazy\"class=\"modalImg\" style=\"width:100%; max-width:399px;\" src=\"/images/journal/coldweather.png\"></figure>",
+      "tags": "thoughts",
+      "mood": "asleep"
+    },
+    {
+        "id": "6",
+        "date_published": "2024-09-11T10:26:40+01:00",
+        "title": "entry #6",
+        "content_html": "<p>Hi. Sometimes idk why I made a journal page because the idea of just writing about my personal life on the internet is so weird. But this is me updating the journal so that my coding of it does not feel like a complete waste of time.<\/p>\r\n\r\n<ol>\r\n    <li>I am very excited for the autumn<\/li>\r\n    <li>Seven hundred men with bayonets are stabbing me in the soft canal (I have an ear infection it really hurts :( )<\/li>\r\n    <li>I started reading Dune (important information because I have not read a book in a very very long time)<\/li>\r\n<\/ol>",
+        "tags": "life",
+        "mood": "dead"
+    },
+    {
+      "id": "5",
+      "date_published": "2024-08-10T22:22:19+01:00",
+      "title": "\"Artist\"",
+      "content_html": "<p>I went to a music and arts festival recently and there was a lot of crazy art and confident art-types everywhere. It really inspired me but it's also made me feel very... inferior?<br>I love making webpages, I love making pixelart and 3d models, but it feels second-rate to the kind of things I saw at the festival like ... tangible, cutting-edge art. And that's not me saying I think x art is more \"Art\"than y art because thats <i>stupid</i>. Just that the art I do make doesn't make me feel like an artist.</p>\r\n<p>I grew up drawing and painting. That was like THE thing I did. It was ALL I did. I lost touch with that when I became a Grown Up and idk why exactly but I think the growing pressure and idea of \"your art is only worth something if you show people/post it online:)\"definitely didn't help.<br>And even now that I'm inspired to start painting again, in the back of my head I keep just thinking \"but will it get popular on instagram?\"&nbsp;<br>I hhhhhhaaaaaattttteeeeee that shit, man</p>",
+      "tags": "thoughts",
+      "mood": "unimpressed"
+    },
+    {
+      "id": "4",
+      "date_published": "2024-07-07T19:23:24+01:00",
+      "title": "i got a tattoo",
+      "content_html": "<img loading=\"lazy\"class=\"modalImg\"style=\"width:35%; float:right; margin:10px\"src=\"/images/journal/photos/tattoojuly24.jpg\"><p>Yesterday I got a tattoo by <a href=\"https://www.instagram.com/oneten_art/\">Oneten.</a> It took 4 hours and was very scary because my only other tattoo is very small and was done by a friend of a friend. Anyway look at my cool new tattoo…&nbsp;</p><p>If youre interested, the design is of a <a href=\"https://clivehicksjenkins.wordpress.com/2013/10/14/schandmaskes-masks-of-shame/\">schandmaske.</a> Because I think they are cool</p><p>I took this picture in the studio bathroom lol</p>",
+      "tags": "life",
+      "mood": "cool"
+    },
+    {
+      "id": "3",
+      "date_published": "2024-06-21T12:15:42+01:00",
+      "title": "DH-PC.EXE",
+      "content_html": "<p>Its obligatory to have a nostalgic fake desktop/windows element on your neocities somewhere. I've wanted my links page to act like one since I started this site ages ago, bc I want it to be like you're using the laptop on the dog-house homepage. The most nostalgic OS to me is Windows Vista (what was on my first laptop) so I made it with that vibe in mind.<br>I've been learning more recently about styling things with pure CSS using stuff like svg filters and background blend modes, so the taskbar styling is entirely in the CSS. It was fun but it does really open the door to it looking really bad on other people's machines/browsers.</p><figure class=\"image\"><img loading=\"lazy\"class=\"modalImg\"src=\"/images/misc/dhpc.png\"style=\"width:100%;\"><figcaption><span style=\"color:#bd3212;\">This is now my actual desktop background for my XP-Pen which is small enough for the bad resolution of this image to not be noticeable:) lol</span></figcaption></figure><p>The cloud image is actually a background from windows 95, just with the levels adjusted so the image is more saturated and \u2026 blue. The dogPC graphic is an SVG loaded into blender and given a glass material. I'm not good with PBR materials or sorting out lighting at all so making this took me all day TT_TT tbh I'm very bad at 3D modeling in general and my blender files for everything are a complete mess.</p><figure><table><colgroup><col style=\"width:20%;\"><col style=\"width:20%;\"><col style=\"width:20%;\"><col style=\"width:20%;\"><col style=\"width:20%;\"></colgroup><tbody><tr><td><img loading=\"lazy\"class=\"modalImg\"style=\"width:100%;\"src=\"/images/misc/www3d.png\"></td><td><img loading=\"lazy\"class=\"modalImg\"style=\"width:100%;\"src=\"/images/misc/music3d.png\"></td><td><img loading=\"lazy\"class=\"modalImg\"style=\"width:100%;\"src=\"/images/misc/folder3d.png\"></td><td><img loading=\"lazy\"class=\"modalImg\"style=\"width:100%;\"src=\"/images/misc/star3d.png\"></td><td><img loading=\"lazy\"class=\"modalImg\"style=\"width:100%;\"src=\"/images/misc/paint3d.png\"></td></tr></tbody></table><figcaption><span style=\"color:#bd3212;\">Inspired by the Dreamcast menu icons. Ive never even seen a dreamcast in real life but I like its menu screen a lot. these are pretty scyffed at full res but they do the job lol</span></figcaption></figure><p>I made these^ icons in Illustrator and it was super easy and fun. I want to make more 3D stuff in that program, I'm just not sure what right now.</p>",
+      "tags": "code",
+      "mood": "computing"
+    },
+    {
+      "id": "2",
+      "date_published": "2024-05-26T22:04:26+01:00",
+      "title": "foxgloves",
+      "content_html": "<p>Foxgloves are one of my favourite plants and they’re my favourite wildflower (along with gorse). One of the first things I planted was a foxglove in my mum’s garden, and when it produced seeds I collected them and used them to grow my first plants from seed. Foxgloves are biennials which means they grow their leaves for a year, then flower the next year before seeding and dying.</p><p>I planted those seeds 2 years ago in little trays and this is them now!!!<br><table><tr><td><img loading=\"lazy\"class=\"modalImg\"src=\"/images/journal/photos/foxgloves2-min.jpg\"alt=\"three pink foxgloves and one white foxglove in a garden\"></td><td><img loading=\"lazy\"class=\"modalImg\"src=\"/images/journal/photos/foxgloves1-min.jpg\"alt=\"a foxglove with pink and white flowers\"></td><td><video autoplay loop muted playsinline class=\"modalImg\"src=\"/images/journal/photos/foxgloves.webm\"></video> </td></tr></table><br>They’re around 2 metres tall and still growing. Ones I’ve gotten from garden centres before have been smaller and with much fewer flower spikes so I am very proud. They like where I’ve put them a lot.<hr><p>A poem about foxgloves that I am writing right now:<blockquote><em>Congregation buzzes,<br>Busy bodies in and out<br>to clean high hanging bells,<br>Pink cathedral with your tall spires,<br> How do I get in?</em></blockquote></p>",
+      "tags": "garden",
+      "mood": "awe"
+    },
+    {
+      "id": "1",
+      "date_published": "2024-05-25T21:09:00+01:00",
+      "title": "lifeslime",
+      "content_html": "<p>I made this website in *checks profile* 2021 and it had a journal that I wrote in but then I stopped posting or updating the site. Anyway the entries were all sad and shit because I was all sad and shit back then.<br><br>A lot has changed in the last few years tho and these is those things:<ul><li>Moved out of my parents house</li><li>Got vinnie cat (best)</li><li>I am now 27</li><li>I had very good therapy that made me not sad and shit anymore (thank you Josef)</ul></p>",
+      "tags": "life",
+      "mood": "proud"
+    }
+  ]
+}

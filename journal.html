@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--DO NOT copy my code or save/use my assets. Send me an email at doghouse.neocities@gmail.com if you have any questions about my site. Franks you-->
+<!--CREDITS: Fonts used: Kinky by Sick again (https://sickagain.gumroad.com/l/qfiyq), Nunito by Vernon Adams, Cyreal, Jacques Le Bailly (https://www.fontshare.com/fonts/nunito), Porky's by fontalicious (https://www.dafont.com/porky-s.font) -->
+<html lang="en-GB">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Journal </title>
+        <link rel="shortcut icon" type="image/jpg" href="images/favicon.svg">
+        <link rel="stylesheet" href="templates/pagebase.css">
+        <link rel="stylesheet" href="templates/pagev1.css">
+        <link rel="stylesheet" href="journal.css">
+        <script src="globalscripts.js"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <img id="bg" src="diarybg.png">
+
+        <button id="entry1">2024/11/11 - Time to go LIVE!</button>
+        <button id="entry2">2024/11/09 - Preparing for launch</button>
+        <button id="entry3">2024/11/03 - FETCH</button>
+        <button id="entry4">2024/11/01 - OCTOBER</button>
+        <p id="textContent"></p>
+        <script>
+            var text = document.getElementById('textContent');
+
+            text.textContent = "today is the day, i'm finally ready to launch. i hope this goes well, and i hope my new friends can help me find out what it's like to play fetch on the moon. im so nervous, but so excited at the same time. i guess you could say im... nervcited?? im just gonna stop writing now."
+
+            function entry1(){
+                text.textContent = "today is the day, i'm finally ready to launch. i hope this goes well, and i hope my new friends can help me find out what it's like to play fetch on the moon. im so nervous, but so excited at the same time. i guess you could say im... nervcited??"
+            }
+            function entry2(){
+                text.textContent = "we're almost ready to launch on pumpfun. i'm super excited to meet a ton of new friends, and make my impact! everyone hold your bags, because i'm fetching the moon."
+            }
+
+            function entry3(){
+                text.textContent = "i've always wondered, how would fetch work on the moon? what would it be like? one day, i definitely want to find out. hopefully someone can take me there one day!"
+            }
+
+            function entry4(){
+                text.textContent = "time is going by so fast, it's already the spooky month! i'm going to be a year old 2 months from today! no wonder my back is starting to hurt!"
+            }
+
+            document.getElementById('entry1').addEventListener('click', entry1)
+            document.getElementById('entry2').addEventListener('click', entry2)
+            document.getElementById('entry3').addEventListener('click', entry3)
+            document.getElementById('entry4').addEventListener('click', entry4)
+            
+        </script>
+
+        <a href="index.html">
+            <img src="arrow.png" id="back">
+        </a>
+    </body>

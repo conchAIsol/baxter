@@ -1,0 +1,254 @@
+:root {
+  --offblack: rgb(33, 33, 35);
+  --skybg: linear-gradient(#6b61ff, #66a1ff, #8ecde6, #f0eff4);
+  --horizonbg: linear-gradient(
+    #6b61ff,
+    #66a1ff,
+    #8ecde6,
+    #f0eff4,
+    #d3e307,
+    #9e5d3d
+  );
+  --grassbg: linear-gradient(
+      341deg,
+      rgba(102, 161, 255, 0.281) 65%,
+      rgba(240, 239, 244, 0.15) 85%,
+      rgba(244, 214, 104, 0.15) 100%
+    ),
+    url(../images/backgrounds/grasspattern.png);
+  --mainbody: #fcffe9;
+  --accent: rgb(0, 136, 255);
+  --shadow-color: 0deg 30% 52%;
+  --drop-shadow: 0.7px 1px 1.4px hsl(var(--shadow-color) / 0.2),
+    1.1px 1.8px 2.5px -1.1px hsl(var(--shadow-color) / 0.24),
+    2.8px 4.3px 6px -2.1px hsl(var(--shadow-color) / 0.28);
+  --overlay: #fbffe95c;
+  --cloudBg: rgb(240, 254, 255);
+  --cloudUpGrad: rgb(255, 253, 246);
+  --cloudBotGrad: rgb(155, 208, 255);
+  --cloudShadow: #61b0ff75;
+}
+body {
+  background-color: #9e5d3d;
+  background-image: var(--horizonbg);
+  background-size: 100vw;
+  background-attachment: fixed;
+  font-family: "MS UI Gothic", sans-serif;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--offblack);
+  overflow: hidden;
+}
+* {
+  scrollbar-width: thin;
+  box-sizing: border-box;
+}
+a:link {
+  text-decoration: none;
+}
+.hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.cloudBubble {
+  will-change: transform;
+  width: 100%;
+  height: min-content;
+  filter: url("pagebase.css");
+}
+.cloudBubble div:first-child {
+  position: absolute;
+  z-index: -1;
+  background-color: var(--cloudBg);
+  background-image: radial-gradient(
+    circle at 0% -40%,
+    var(--cloudUpGrad),
+    50%,
+    var(--cloudBg) 60%,
+    90%,
+    var(--cloudBotGrad)
+  );
+  border: 1px solid white;
+  border-radius: 25%;
+  box-shadow: 0px -1px 10px var(--cloudBg) inset,
+    0px -20px 20px var(--cloudShadow) inset, 0 0 5px 3px var(--cloudBotGrad);
+  width: 100%;
+  height: 100%;
+  filter: url("pagebase.css");
+}
+.cloudContent {
+  display: block;
+  text-align: center;
+  color: #61b0ff;
+  font-family: Nunito;
+  font-weight: 700;
+  line-height: 110%;
+  margin: 5px;
+}
+.cloudBubble > a {
+  display: block;
+  text-align: center;
+  color: #427afd;
+  text-shadow: 0 0 5px white, 1px 1px 8px var(--cloudShadow);
+  font-family: Nunito;
+  font-weight: 1000;
+  margin: 5px;
+}
+@keyframes floatAcross {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-10vw);
+  }
+}
+.cloud {
+  position: absolute;
+  width: 45px;
+  height: 33px;
+  transform: translateX(100vw);
+  animation: floatAcross 13s linear infinite;
+}
+@keyframes squish {
+  0% {
+    transform: scale(1, 1);
+  }
+  40% {
+    transform: scale(0.95, 1.05);
+  }
+  90% {
+    transform: scale(1.05, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.squish {
+  animation: squish 200ms forwards;
+  animation-timing-function: cubic-bezier(0, 0.85, 0.56, 1.01);
+}
+.centreDiv {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.vertCentre {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centreImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.imgVertAlign {
+  vertical-align: middle;
+}
+.hiddenImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+.justifyImg {
+  text-align: justify;
+}
+.justifyImg > img {
+  display: inline-block;
+}
+.justifyImg:after {
+  content: " ";
+  display: inline-block;
+  width: 100%;
+  height: 0;
+}
+.justifyText {
+  text-align: justify;
+}
+.centreText {
+  text-align: center;
+}
+.smallText{
+  font-size: small;
+}
+.smallerText{
+  font-size: smaller;
+}
+.dropShadow {
+  box-shadow: var(--drop-shadow);
+}
+.span2 {
+  grid-column: span 2;
+}
+.spanAll {
+  grid-column: 1/-1;
+}
+.vert2 {
+  grid-row: span 2;
+}
+.vertAll {
+  grid-row: 1/-1;
+}
+.textFluffy {
+  color: #95cdff;
+  text-shadow: var(--cloudBg) 0 0 5px;
+  font-family: "Porkys";
+  font-size: 3cqw;
+  letter-spacing: 5px;
+}
+@font-face {
+  font-family: "Adelia";
+  src: url("fonts/ADELIA.woff") format("woff"),
+    url("fonts/ADELIA.woff2") format("woff2");
+}
+@font-face {
+  font-family: "LedLight";
+  src: url("fonts/LEDLIGHT.woff") format("woff"),
+    url("fonts/LEDLIGHT.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Comico";
+  src: url("fonts/Comico-Regular.woff") format("woff"),
+    url("fonts/Comico-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Garamondt-i";
+  src: url("fonts/Garamondt-Italic.woff") format("woff"),
+    url("fonts/Garamondt-Italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Porkys";
+  src: url("fonts/PORKYS_.woff") format("woff"),
+    url("fonts/PORKYS_.woff2") format("woff2");
+}
+@font-face {
+  font-family: "PlanetE";
+  src: url("fonts/PLANE___.woff") format("woff"),
+    url("fonts/PLANE___.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Kinky";
+  src: url("fonts/KINKY.woff") format("woff"),
+    url("fonts/KINKY.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SmallHollows";
+  src: url("fonts/small_hollows.woff") format("woff"),
+    url("fonts/small_hollows.woff2") format("woff2");
+}
+@font-face {
+  font-family: "LED";
+  src: url("fonts/LEDCalculator.woff") format("woff"),
+    url("fonts/LEDCalculator.woff2") format("woff2");
+}
+@font-face {
+  font-family: "WildWorld";
+  src: url("fonts/Animal-Crossing-Wild-World.woff") format("woff"),
+   url("fonts/Animal-Crossing-Wild-World.woff2") format("woff2");
+}

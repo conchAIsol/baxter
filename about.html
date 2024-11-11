@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!--DO NOT copy my code or save/use my assets. Send me an email at doghouse.neocities@gmail.com if you have any questions about my site. Franks you-->
+<!--CREDITS: Fonts used: Kinky by Sick again (https://sickagain.gumroad.com/l/qfiyq), Adelia by fanastudio (https://www.dafont.com/adelia.font), planet Estyle by planet (http://www.planet.dk/fonts/) -->
+<html lang="en-GB">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> About </title>
+        <link rel="shortcut icon" type="image/jpg" href="images/favicon.svg">
+        <link rel="stylesheet" href="templates/pagebase.css">
+        <link rel="stylesheet" href="templates/pagev1.css">
+        <link rel="stylesheet" href="about.css">
+        <script src="https://cdn.jsdelivr.net/npm/sp-supermarquee@latest/dist/SuperMarquee.min.js"></script>
+        <script src="globalscripts.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <script src="modules/clouds.js"></script>
+        <svg style="position: absolute; width: 0; height: 0;">
+            <filter id="blur">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="0.5" />
+            </filter>
+        </svg>
+        <svg style="position: absolute; width: 0; height: 0;">
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" />
+              <feColorMatrix
+                in="blur"
+                values="1 0 0 0 0 
+                        0 1 0 0 0 
+                        0 0 1 0 0 
+                        0 0 0 15 -7"
+            />
+            </filter>
+        </svg>
+        <div>
+            <img class="hidden" src="images/DHSVGs/DHicon1.svg" alt="">
+            <img class="hidden" src="images/DHSVGs/DHicon2.svg" alt="">
+            <img class="hidden" src="images/DHSVGs/DHicon3.svg" alt="">
+            <img class="hidden" src="images/DHSVGs/DHicon4.svg" alt="">
+            <img class="hidden" src="images/DHSVGs/DHicon5.svg" alt="">
+            <img class="hidden" src="images/DHSVGs/DHicon6.svg" alt="">
+            <img class="hidden" src="images/DHSVGs/DHicon7.svg" alt="">
+            <img class="hidden" src="images/DHSVGs/DHicon8.svg" alt="">
+            <img class="hidden" src="images/DHSVGs/DHicon9.svg" alt="">
+        </div>
+
+        <div class="mainGrid">
+            <div class="leftContainer"></div>
+
+            <div class="leftSidebar">
+                <ul id="navbar"></ul>
+                <script type="module" src="modules/navbar.js"></script>
+            </div>
+            
+            <div class="mainContainer">
+                <div id="contentWrapper">
+
+                    <div id="leftContentWrapper">
+                        <div id="imgBubble" class="borderBox dropShadow wobble">
+                            <img class="vertCentre" 
+                            srcset="images/misc/mex2.gif 300w, images/misc/mex1.gif 150w"
+                            sizes="(max-width: 1000px) 150px, 300px"
+                            src="images/misc/mex1.gif" 
+                            alt="">
+                        </div>
+                        <div id="statsBubble" class="dropShadow">
+                            <div id="tinyBadges"></div>
+                            <table id="basics">
+                                <tr>
+                                    <th colspan="2">I am...</th>
+                                </tr>
+                                <tr>
+                                    <th>Named</th>
+                                    <td>Spaniel / snuppo</td>
+                                </tr><tr>
+                                    <th>Aged</th>
+                                    <td>27 yeared</td>
+                                </tr><tr>
+                                    <th>Special Ability</th>
+                                    <td>zzzz... (snore)</td>
+                                </tr><tr>
+                                    <th>Weakness</th>
+                                    <td>(wakes up)</td>
+                                </tr>
+                            </table>
+                            <table id="favs">
+                                <tr>
+                                    <th colspan="2">Favourite...</th>
+                                </tr><tr>
+                                    <th>Colours</th>
+                                    <td id="favColours">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </td>
+                                </tr><tr>
+                                    <th>Animals</th>
+                                    <td>Snails and slugs</td>
+                                </tr><tr>
+                                    <th>Flavours</th>
+                                    <td>Coconut, lychee, cinnamon</td>
+                                </tr><tr>
+                                    <th>Weather</th>
+                                    <td>Rainy</td>
+                                </tr><tr>
+                                    <th>Plants</th>
+                                    <td>Orchids, hydrangeas, foxgloves</td>
+                                </tr><tr>
+                                    <th>Music</th>
+                                    <td>Shoegaze, post punk, art pop</td>
+                                </tr><tr>
+                                    <th>Video games</th>
+                                    <td>MoonRPG, Earthbound, Animal Crossing, Dark Souls</td>
+                                </tr>
+                            </table>
+                            <table id="currently">
+                                <tr>
+                                    <th colspan="2">Currently...</th>
+                                </tr><tr>
+                                    <th>Playing</th><td id="playing"></td>
+                                </tr><tr>
+                                    <th>Listening to</th><td id="listening"></td>
+                                </tr><tr>
+                                    <th>Doing</th><td id="doing"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="rightContentWrapper">
+                        <div id="badges">
+                            <img src="images/badges/dog.png" alt="puppy pal">
+                            <img src="images/badges/lonely99.gif" alt="99% lonely">
+                            <img src="images/badges/100bitch.gif" alt="100% bitch">
+                            <img src="images/badges/girlboy.png" alt="I'm a girl boy">
+                            <img src="images/badges/uk_eng.gif" alt="English">
+                            <img src="images/badges/emo.png" alt="Emo lad">
+                            <img src="images/badges/ignore.gif" alt="Ignore">
+                            <img src="images/badges/allyourbase.gif" alt="all your base are belong to us">
+                            <img src="images/badges/cookie.png" alt="I like a cookie">
+                            <img src="images/badges/grrrargh.png" alt="Grrr. Argh.">
+                            <img src="images/badges/aldi.gif" alt="Aldi">
+                            <img src="images/badges/badboy.gif" alt="Bad boy 4 life">
+                        </div>
+
+                        <div id="littleFella">
+                            <a href="https://chibidoll.com"><img src="https://chibidoll.com/I3_M7_B1_F5_Ldown_Rdown/Spaniel.png" alt="my chibidoll.com avatar"></a>
+                            <div id="speechBubble"><div></div><div class="wobble">
+                                xX.. i have Logged On 0_0 ..Xx
+                            </div></div>
+                        </div>
+                        
+                        <div id="aboutInfo">
+                            <p><span class="rainbowText">HELLO</span> I am the world's largest single celled organism. I may appear in your room if you search "funny animal compilation videos" at 3am, or if your house has an overabundance of biscuit crumbs/sugar dustings.</p>
+                            <p id="interests"><span class="highlight">INTERESTS:</span>Weird animals, mushrooms, slime moulds, marine & freshwater biology, horror media, 60s-70s children's stop motion and puppets, vintage toys</p>
+                            <p id="hobbies"><span class="highlight">HOBBIES:</span>Gardening, foraging, digital and traditional art, sculpting, crochet, needlepoint tapestry, webdev :3, <a href="music/music.html">listening to music</a>, virtual pet sites, dressup games/avatar creation</p>
+                            <p id="dislikes"><span class="highlight">DISLIKES:</span>The internet, hot weather, being poisoned</p>
+                        </div>
+                        
+                        <div id="quizBubble" class="wobble">
+                            <span>official diagnoses</span>
+                            <div id="resultsWrapper">
+                                <a class="" href="http://cupped-expressions.net/cheese/quiz/">
+                                    <img src="images/quiz-results/mozzarella03.gif" alt="mozzarella"></a>
+                                <a class="span2" href="https://www.springhole.net/quizzes/fairyquiz/index.html">
+                                    <img src="images/quiz-results/whatfairy_flowerfairy.gif" alt="Flower fairy"></a>
+                                <a class="" href="https://casiopea.neocities.org/isopod/isopodquiz">
+                                    <img src="images/quiz-results/BGiganteus.png" alt="Bathynomus giganteus"></a>
+                                <a href="http://www.theotaku.com/quizzes/view/2597/what_kirby_hat_do_you_wear">
+                                    <img src="images/quiz-results/kirbyhat.jpg" alt="animal hat"></a>
+                                <a href="https://web.archive.org/web/20091028180015/http://valvigirl.net/quizzes/ppgquiz.html">
+                                    <img src="images/quiz-results/bubbles.gif" alt="Bubbles"></a>
+                                <a class="span2" href="https://swiftyshq.neocities.org/fun/quiz/eon">
+                                    <img src="https://swiftyshq.neocities.org/img/quiz/eon/vee6.png" alt="leafeon" title="relaxed and introverted, you are a very sleepy person who doesn't care for drama"></a>
+                                <a href="http://www.allaboutfrogs.org/funstuff/frogtest.php3">
+                                    <img src="images/quiz-results/frogresult.jpg" alt="Pacman frog"></a>
+                                <a class="span2" href="https://web.archive.org/web/20021118111157/http://www.geocities.com/Tokyo/Garden/7024/scoutquiz.html">
+                                    <img src="images/quiz-results/minimoon.gif" alt="Saior Minimoon"></a>
+                                <a href="http://suppi.net/slg/fun/aquiz.php">
+                                    <img src="images/quiz-results/bag.jpg" alt="winged backpack"></a>
+                                <a class="span2" href="http://suppi.net/slg/fun/wquiz.php">
+                                    <img src="images/quiz-results/sugoi.jpg" alt="sugoi"></a>
+                                <a href="https://swiftyshq.neocities.org/fun/quiz/box">
+                                    <img src="https://swiftyshq.neocities.org/img/quiz/box/b2.png" alt="a copy of Petz Catz 2 for the Wii"></a>
+                                <a href="https://web.archive.org/web/20020603123950/http://understudie.com/quiz/bears/">
+                                    <img src="images/quiz-results/cutie.jpg" alt="cutie"></a>
+                            </div>
+                        </div>
+
+                        <div id="stamps"></div>
+                    </div>
+                
+                </div>
+            </div>
+
+            <div class="header">
+                <div class="title">
+                    ABOUT
+                </div>
+            </div>
+
+
+            <div class="homeContainer">
+                <a href="home.html"><div id="homeLink"></div></a>
+            </div>
+
+            <div class="rightSidebar">
+                <div id="fanlistings">
+                    <a class="span2" href="https://precious-memory.net/nature/orchids/"><img src="images/fanlistings/orchids.gif" alt="Orchid fanlisting button"></a>
+                    <a href="http://silent.am/pyramid/"><img src="images/fanlistings/ph.png" alt="Pyramid Head fanlisting button"></a>
+                    <a href="https://fan.drinkingsouls.com/bullets/index"><img src="images/fanlistings/bullets-50x50.jpg" alt="My Chemical Romance's 'I Brought You My Bullets, You Brought Me Your Love' fanlisting button"></a>
+                    <a href="https://sunnypark.buruma.net/idog/index.php"><img src="images/fanlistings/iDog50x50.png" alt="iDog fanlisting button"></a>
+                    <a class="span2" href="http://inspirationally.net/sea/"><img src="images/fanlistings/sea.gif" alt="The sea fanlisting button"></a>
+                    <a href="https://fan.wings.nu/seabunnies/"><img src="images/fanlistings/snoopy50x50.gif" alt="Snoopy fanlisting button"></a>
+                    <a href="https://fan.wings.nu/seabunnies/"><img src="images/fanlistings/seabunnies.png" alt="Seabunnies fanlisting button"></a>
+                    <a href="https://fans.thislove.nu/siamese/"><img src="images/fanlistings/siamese.jpg" alt="Siamese cats fanlisting button"></a>
+                    <a class="span2" href="https://moomins.fanfreak.net/"><img src="images/fanlistings/snorkmaiden100x50.png" alt="The Moomins fanlisting button"></a>
+                    <a class="span2" href="http://kenzicollective.altervista.org/spaniels/index.php"><img src="images/fanlistings/cockerspaniels.png" alt="Cocker Spaniels fanlisting button"></a>
+                </div>
+                
+                <div id="player" class="cloudBubble">
+                    <div class="wobble"></div>
+                    <span class="textFluffy vertCentre">:3c</span>
+                </div>
+            </div>
+            <div class="rightContainer"></div>
+        </div>
+    
+    <script type="module">
+        import {generateNumber, generateBorder, generateTransform, wobble, float} from './modules/wobbleAnimation.js';
+
+        const wobblers = document.getElementsByClassName("wobble");
+        Array.from(wobblers).forEach((element) => {
+            wobble(element, 3, 5, 10000);
+            float(element, -1, 0, 10000);
+        });
+        const floaters = document.getElementsByClassName("cloudBubble");
+        Array.from(floaters).forEach((element) =>{
+            float(element, -2, 2, 10000);
+        });
+
+        fetch("/currently.json")
+        .then(response => response.json())
+        .then(json => {
+            let playing = document.getElementById("playing");
+            let listening = document.getElementById("listening");
+            let doing = document.getElementById("doing");
+
+            playing.innerHTML = json.playing;
+            listening.innerHTML = json.listening;
+            doing.innerHTML = json.doing;
+        });
+
+        new SuperMarquee(document.getElementById("tinyBadges"),{ 
+            "content" : "<img src="https://dog-house.neocities.org/\&quot;/images/tinybadges/angel.gif\&quot;" width=\"49px\" height=\"18px\"/><img src="https://dog-house.neocities.org/\&quot;/images/tinybadges/cute.gif\&quot;" width=\"42px\" height=\"18px\"/><img src="https://dog-house.neocities.org/\&quot;/images/tinybadges/creepy.gif\&quot;" width=\"55px\" height=\"18px\"/><img src="https://dog-house.neocities.org/\&quot;/images/tinybadges/rawr.gif\&quot;" width=\"47px\" height=\"18px\"/><img src="https://dog-house.neocities.org/\&quot;/images/tinybadges/love.gif\&quot;" width=\"43px\" height=\"18px\"/><img src="https://dog-house.neocities.org/\&quot;/images/tinybadges/innocent.gif\&quot;" width=\"66px\" height=\"18px\"/><img src="https://dog-house.neocities.org/\&quot;/images/tinybadges/sweet.gif\&quot;" width=\"51px\" height=\"18px\"/><img src="https://dog-house.neocities.org/\&quot;/images/tinybadges/juicy.gif\&quot;" width=\"47px\" height=\"18px\"/><img src="https://dog-house.neocities.org/\&quot;/images/tinybadges/wacky.gif\&quot;" width=\"54px\" height=\"18px\"/><img src="https://dog-house.neocities.org/\&quot;/images/tinybadges/stupid.gif\&quot;" width=\"56px\" height=\"18px\"/>",
+            "spacer" : "<img src="https://dog-house.neocities.org/\&quot;/images/tinybadges/punky.gif\&quot;" width=\"55px\" height=\"18px\"/>",
+        });
+
+        new SuperMarquee(document.getElementById( "stamps" ),{ 
+            "content" : "<img src="https://dog-house.neocities.org/\&quot;/images/stamps/roach.gif\&quot;" width=\"99px\" height=\"56px\"/><img src="https://dog-house.neocities.org/\&quot;/images/stamps/collar.png\&quot;" width=\"99px\" height=\"56px\"/><img src="https://dog-house.neocities.org/\&quot;/images/stamps/life.gif\&quot;" width=\"99px\" height=\"56px\"/><img src="https://dog-house.neocities.org/\&quot;/images/stamps/nekojiru.gif\&quot;" width=\"99px\" height=\"56px\"/><img src="https://dog-house.neocities.org/\&quot;/images/stamps/fluffytail.png\&quot;" width=\"99px\" height=\"56px\"/><img src="https://dog-house.neocities.org/\&quot;/images/stamps/dandruff.gif\&quot;" width=\"99px\" height=\"56px\"/><img src="https://dog-house.neocities.org/\&quot;/images/stamps/lady1.gif\&quot;" width=\"99px\" height=\"56px\"/><img src="https://dog-house.neocities.org/\&quot;/images/stamps/mellodied.gif\&quot;" width=\"99px\" height=\"56px\"/><img src="https://dog-house.neocities.org/\&quot;/images/stamps/mother3.gif\&quot;" width=\"99px\" height=\"56px\"/><img src="https://dog-house.neocities.org/\&quot;/images/stamps/music2.gif\&quot;" width=\"99px\" height=\"56px\"/><img src="https://dog-house.neocities.org/\&quot;/images/stamps/nyanfire.gif\&quot;" width=\"99px\" height=\"56px\"/><img src="https://dog-house.neocities.org/\&quot;/images/stamps/supportass.png\&quot;" width=\"99px\" height=\"56px\"/>",
+            "spacer" : "<img src="https://dog-house.neocities.org/\&quot;/images/stamps/chao.gif\&quot;" width=\"99px\" height=\"56px\"/>",
+            "pauseonhover": true,
+            "speed": "slow"
+        });
+ 
+    </script>
+    </body>
+    </html>
+    

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BAXTER</title>
+        <link rel="shortcut icon" type="image/jpg" href="images/favicon.svg">
+        <link rel="stylesheet" href="templates/pagebase.css">
+        <link rel="stylesheet" href="home.css">
+        <script src="globalscripts.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </head>
+ 
+    <body id="body">
+        <div id="cloudHolder" style="width: 200px; height: 200px;"></div>
+        <script src="modules/clouds.js"></script>
+        <svg style="position: absolute; width: 0; height: 0;">
+            <filter id="blur">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="0.5" />
+            </filter>
+        </svg>
+        <svg style="position: absolute; width: 0; height: 0;">
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" />
+              <feColorMatrix
+                in="blur"
+                values="1 0 0 0 0 
+                        0 1 0 0 0 
+                        0 0 1 0 0 
+                        0 0 0 15 -7"
+            />
+            </filter>
+        </svg>
+
+        <div class="vertCentre" id="mainWrapper">
+
+            <div id="houseGraphicWrapper">
+                <div class="vertCentre houseWobble" id="houseBubble"></div>
+                    <img class="vertCentre" src="images/home-select/Room.png">
+                    <a><img id="about" class="vertCentre item" src="images/home-select/Lucky.gif"></a>
+                    <a href="journal.html"><img id="journal" class="vertCentre item" src="images/home-select/Journal.png"></a>
+                    <a href="contact.html"><img id="contact" class="vertCentre item" src="images/home-select/Phone.png"></a>
+                    <a href="links.html"><img id="links" class="vertCentre item" src="images/home-select/laptop.gif"></a>
+                    <a href="music/music.html"><img id="music" class="vertCentre item" src="images/home-select/CD.gif"></a>
+                    <!-- <a href="/snail"><img id="snail" class="vertCentre item" src="images/home-select/snail.gif"></a>
+                    <a href="/pets"><img id="pets" class="vertCentre item" src="images/home-select/fish.gif"></a> -->
+
+                   
+                    <div id="feelingWrapper">
+                        <button id="close">Close Chat</button>
+                        <button id="what">What can I do on this site?</button>
+                        <button id="live">Are you live on pumpfun?</button>
+                        <button id="name">What's your name?</button>
+                        <div id="feeling" class="cloudBubble">
+                            <div class="feelingWobble"></div>
+                            <span>
+                                <p id="centreText"></p>
+                                
+                            </span>
+                        </div>
+                        <div id="miniBubble" class="cloudBubble"><div class="feelingWobble"></div></div>
+                    </div>
+
+                    <script>
+                        var text = document.getElementById("centreText")
+                        var wrapper = document.getElementById("feelingWrapper")
+                        function hideMsg(){
+                            wrapper.style.visibility = 'hidden'
+                        }
+                        function computer(){
+                            endDialogue()
+                            wrapper.style.visibility = 'visible'
+                            text.textContent = "feel free to play some games on my laptop!"
+
+                            console.log("executed")
+                        }
+
+                        function music(){
+                            endDialogue()
+                            wrapper.style.visibility = 'visible'
+                            text.textContent = "you should turn on some music for us to listen to!"
+                        }
+
+                        function journal(){
+                            endDialogue()
+                            wrapper.style.visibility = 'visible'
+                            text.textContent = "quite snoopy i see..."
+                        }
+                        function phone(){
+                            endDialogue()
+                            wrapper.style.visibility = 'visible'
+                            text.textContent = "chat with friends and i!"
+                        }
+                        
+                        document.getElementById("contact").addEventListener('mouseover', phone)
+                        document.getElementById("contact").addEventListener('mouseout', hideMsg)
+                        document.getElementById("journal").addEventListener('mouseover', journal)
+                        document.getElementById("journal").addEventListener('mouseout', hideMsg)
+                        document.getElementById("music").addEventListener('mouseover', music)
+                        document.getElementById("music").addEventListener('mouseout', hideMsg)
+                        document.getElementById("links").addEventListener('mouseover', computer)
+                        document.getElementById("links").addEventListener('mouseout', hideMsg)
+                    </script>
+
+
+                    <script>
+                        var text = document.getElementById("centreText")
+                        function endDialogue(){
+                            document.getElementById("feelingWrapper").style.visibility = 'hidden';
+                            document.getElementById("live").style.visibility = 'hidden';
+                            document.getElementById("name").style.visibility = 'hidden';
+                            document.getElementById("what").style.visibility = 'hidden';
+                            document.getElementById("close").style.visibility = 'hidden';
+                        }
+                        function tellWhat(){
+                            text.textContent = "click around on various objects on the screen and explore! if you have questions, people can chat with me on the phone!"
+                        }
+                        function tellLive(){
+                            text.textContent = "check our telegram and twitter to see if we have tweeted or filtered ca. my ca will also be posted at the top of the site shortly after going live."
+                        }
+
+                        function tellName(){
+                            text.textContent = "my name is binky! my goal is to brighten everyones day. thanks for asking!"
+                        }
+                        
+                        function startDialogue(){
+                            document.getElementById("feelingWrapper").style.visibility = 'visible';
+                            text.textContent = "hi there, how can i help you? :)"
+                            document.getElementById("live").style.visibility = 'visible';
+                            document.getElementById("name").style.visibility = 'visible';
+                            document.getElementById("what").style.visibility = 'visible';
+                            document.getElementById("close").style.visibility = 'visible';
+
+                            document.getElementById("live").addEventListener("click", tellLive)
+                            document.getElementById("name").addEventListener('click', tellName)
+                            document.getElementById("what").addEventListener('click', tellWhat)
+                            document.getElementById("close").addEventListener('click', endDialogue)
+                        }
+                        document.getElementById("about").addEventListener('click', startDialogue)
+                    </script>
+
+            </div>
+
+            <div class="vertCentre" id="leftWrapper">
+                <ul class="vertCentre" id="navbar"></ul>
+                <script type="module" src="modules/navbar.js"></script>
+            </div>
+
+            <div class="vertCentre" id="rightWrapper">
+
+            <div class="cloudBubble">
+                <div class="infoWobble"></div>
+                <span class="cloudContent infoContent">
+                    <img class="centreImg welcomeImg" src="images/dogwelcomebanner.gif" alt="welcome">
+                    <p class="textReg">
+                        make yourself at home in my<br>
+                        <span id="dh" class="rainbowText">DOGHOUSE</span>
+                    </p>
+                    <p class="justifyText textSmall">
+                        help me lighten up the world of pumpfun!<br>
+                    </p>
+                    <p class="justifyText textSmall">
+                        my CA will be posted here soon!
+                    </p>
+                    
+                </span>
+            </div>
+
+
+           
+                
+
+        </div>
+
+        
+
+        
+        
+        
+        <script>
+            window.addEventListener('load', () => {
+                window.scrollTo(0, 0); // Scrolls to the top-left corner
+            });
+        </script>
+    
+    <script type="module">
+        import {generateNumber, generateBorder, generateTransform, wobble, float} from './modules/wobbleAnimation.js';
+        import {generateRainbowText} from './modules/rainbowText.js';
+
+        const infoWobblers = document.getElementsByClassName("infoWobble");
+        Array.from(infoWobblers).forEach((element) => {
+            wobble(element, 3, 5, 10000);
+        });
+        const feelingWobblers = document.getElementsByClassName("feelingWobble");
+        Array.from(feelingWobblers).forEach((element) =>{
+            wobble(element, 3, 5, 8000);
+        });
+        const floaters = document.getElementsByClassName("cloudBubble");
+        Array.from(floaters).forEach((element) =>{
+            float(element, -2, 2, 10000);
+        });
+
+        function houseWobble() {
+            let houseBubble = document.getElementById("houseBubble");
+            wobble(houseBubble, 800, 1000, 50000);
+        };
+        houseWobble();
+        
+        
+    </script>
+
+   
+
+    <p id="ca" class="rainbowText">CA: Launching Now!</p>
+
+    <div id="imageContainer">
+        <a href="https://x.com/binkyonsol" target="_blank">
+          <img id="image1" src="x64.png" alt="Image 1">
+        </a> 
+        
+    </div>
+  
+    <script>
+        
+        
+     
+    </script>
+    
+    </body>
+</html>
